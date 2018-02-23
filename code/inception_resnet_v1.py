@@ -99,9 +99,9 @@ def _inception_resnet_block(x, scale, block_type, block_idx, activation='relu'):
                    activation=None,
                    use_bias=True,
                    name=name_fmt('Conv2d_1x1'))
-    x = Lambda(scaling,
-               output_shape=K.int_shape(up)[1:],
-               arguments={'scale': scale})(up)
+    up = Lambda(scaling,
+                output_shape=K.int_shape(up)[1:],
+                arguments={'scale': scale})(up)
     x = add([x, up])
     if activation is not None:
         x = Activation(activation, name=name_fmt('Activation'))(x)

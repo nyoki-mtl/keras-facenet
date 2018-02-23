@@ -1,5 +1,5 @@
 # keras-facenet
-Facenet implementation by Keras2.0
+Facenet implementation by Keras2
 
 ## Pretrained model
 You can quickly start facenet with pretrained Keras model (trained by MS-Celeb-1M dataset).
